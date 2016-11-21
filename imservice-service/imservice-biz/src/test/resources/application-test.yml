@@ -1,0 +1,61 @@
+ibabygroup:
+  swagger:
+    enabled: true
+    api-info:
+      title: Ibaby-IMService
+    base-package: cn.ibabygroup.pros.imservice.web.controller
+  net:
+    host: http://192.168.1.201:30016/
+  rest:
+    host: http://192.168.1.203:8080/
+    token: XRbghp7zHw8Yx6gX
+  appconfig:
+    ignore-auth: true
+spring:
+#  datasource:
+#    url: jdbc:mysql://192.168.1.202:3306/doctor_voice?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
+#    driver-class-name: com.mysql.jdbc.Driver
+#    username: root
+#    password: 1234
+#    type: com.zaxxer.hikari.HikariDataSource
+  data:
+    mongodb:
+      host: 192.168.1.206
+      port: 27017
+      database: IMService_test
+  imURL:
+    usersig: eJxFkF1PgzAYhf8LtxrtBxUw8aIaXJbA-JjLBjek0LKVzY6Wbg6N-13WsHj7PHlzznl-vI9kfsPaVvKC2QIb7t17wLt2WJxaaUTBaivMgCEhBAFwsUdhOrlXg0AAEogwAP9ScqGsrKU7lCUr*1F0cj2QNF48TScHk6**9N3q9NIlaakN6Q1MH7*R0ldcL5rITv3ndLZ*JTmVMVUkmyTb5vZtB3J63C0NrON36mOaNZumsqCed8EmD2aZrh4uYXxbuG3n9v7QDmKIwlFa*SkcDyCOojCMRs6qan9QtrB9K9wzfv8A*npYNA__
+    identifier: ibaby
+    sdkappid: 1400013128
+    privStr: |
+             -----BEGIN PRIVATE KEY-----
+             MIGEAgEAMBAGByqGSM49AgEGBSuBBAAKBG0wawIBAQQg3Ddihe5VqLoAB3P+4vLr
+             ydsDRKgIiptL/VwqPl8EW1KhRANCAARVX+MArF29kkV8QruR74rUjYi7W4HpI1xx
+             Xwn4CUetKEvlNhnFH+j/WPwX5qOTbfkx00sdUrjXZNKXZ2lh6AHS
+             -----END PRIVATE KEY-----
+    pubStr: |
+            -----BEGIN PUBLIC KEY-----
+            MFYwEAYHKoZIzj0CAQYFK4EEAAoDQgAEVV/jAKxdvZJFfEK7ke+K1I2Iu1uB6SNc
+            cV8J+AlHrShL5TYZxR/o/1j8F+ajk235MdNLHVK412TSl2dpYegB0g==
+            -----END PUBLIC KEY-----
+  rabbitmq:
+    host: 192.168.1.203
+    port: 5672
+    username: ibaby
+    password: ShareIbaby2015
+    virtual-host: /im
+# redis
+redis:
+  host: 192.168.1.206
+  port: 6380
+  password: shareibaby
+  database: 10
+  pool:
+    max-idle: 8
+    min-idle: 0
+    max-active: 10
+    max-wait: -1
+# nginx
+app-uac-server-test:
+ ribbon:
+  listOfServers: 192.168.1.203:9696
